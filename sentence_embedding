@@ -1,0 +1,11 @@
+from inltk.inltk import setup
+setup('hi') #### Needed only once
+from inltk.inltk import get_embedding_vectors
+word = "नृत्य"
+vectors = get_embedding_vectors(word, 'hi')
+print("Embedding Shape is {}".format(vectors.shape))
+
+from inltk.inltk import get_sentence_encoding
+text ="मैं भाग रहा हूँ"
+encoding = get_sentence_encoding(text, 'hi')
+print("Sentence Embedding Shape is {}".format(encoding.shape))
